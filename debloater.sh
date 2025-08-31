@@ -15,12 +15,12 @@ fi
 
 while true; do
     clear
-    
+
     if ! check_device; then
         echo "Device disconnected. exiting..."
         exit 1
     fi
-    
+
     echo "
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
@@ -36,7 +36,7 @@ while true; do
 ╚══════════════════════════════════════════════════════════════╝
 "
 
-    echo "welcome to debloater, suckless tool for android"
+    echo "Welcome to Debloater, suckless tool for android"
     echo ""
     echo "1) Search for a package"
     echo "2) Disable package (safe, reversible)"
@@ -47,13 +47,14 @@ while true; do
     echo "7) Enable google services"
     echo "8) Check device connection"
     echo "9) Exit"
+    echo ""
 
     read -p "👉 Choose an option [1-9]: " main_choice
 
     case $main_choice in
         1)
             read -p "Enter package name to search: " search_term
-            echo "Searching for packages: $search_term"
+            echo "Searching for packages containing: '$search_term'"
             echo "────────────────────────────────────"
             adb shell pm list packages | sed 's/package://g' | sort | grep -i "$search_term" || echo "❌ No packages found matching: $search_term"
             ;;
@@ -137,7 +138,7 @@ while true; do
             adb devices
             ;;
         9)
-            echo "exiting debloater... goodbye"
+            echo "Thanks for using Debloater!"
             exit 0
             ;;
         *)
@@ -147,9 +148,10 @@ while true; do
 
     echo ""
     echo "────────────────────────────────────"
-    read -p "Press Enter to continue or 'q' to quit: " continue_choice
-    if [ "$continue_choice" = "q" ] || [ "$continue_choice" = "Q" ]; then
-        echo "exiting debloater... goodbye"
-        exit 0
-    fi
+    #read -p "Press Enter to continue or 'q' to quit: " continue_choice
+    read -p "Press 'Enter' to continue." UNUSED_READ
+    #if [ "$continue_choice" = "q" ] || [ "$continue_choice" = "Q" ]; then
+    #    echo "exiting debloater... goodbye"
+    #    exit 0
+    #fi
 done
