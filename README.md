@@ -1,9 +1,38 @@
 # Debloater
-Helps Android users remove bloatware off their devices.
+Helps Android users remove bloatware from their devices.
 
-# Usage
+## Usage
 ```./debloater```
-Lists all packages on your device first
+To run the CLI program.
 
-```./debloater <STRING>```
-Lists all packages that start with STRING
+## Preview
+```
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║  ██████╗ ███████╗██████╗ ██╗      ██████╗  █████╗ ████████╗  ║
+║  ██╔══██╗██╔════╝██╔══██╗██║     ██╔═══██╗██╔══██╗╚══██╔══╝  ║
+║  ██║  ██║█████╗  ██████╔╝██║     ██║   ██║███████║   ██║     ║
+║  ██║  ██║██╔══╝  ██╔══██╗██║     ██║   ██║██╔══██║   ██║     ║
+║  ██████╔╝███████╗██████╔╝███████╗╚██████╔╝██║  ██║   ██║     ║
+║  ╚═════╝ ╚══════╝╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝     ║
+║                                                              ║
+║                 by HassanIQ777 & Unknown                     ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+Welcome to Debloater, suckless tool for android
+
+1) Search for a package
+2) Disable package (safe, reversible)
+3) Enable package (reactivate disabled package)
+4) Uninstall for user 0 (safe, reversible with reinstall)
+5) Full uninstall (root required, PERMANENT)
+6) Disable google services
+7) Enable google services
+8) Check device connection
+9) Exit
+
+👉 Choose an option [1-9]:
+```
+
+Thanks to [GNUGPL3](https://github.com/GNUGPL3) for their contributions.
